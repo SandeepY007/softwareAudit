@@ -42,7 +42,7 @@ Route::middleware(['auth', 'user-access:doctor'])->group(function () {
 
 Route::middleware(['auth', 'user-access:developer'])->group(function () {
   
-    Route::get('/developer/home', [HomeController::class, 'develperHome'])->name('developer.home');
+    Route::get('/developer/home', [HomeController::class, 'developerHome'])->name('developer.home');
 });
 
 Route::middleware(['auth', 'user-access:marketing'])->group(function () {
