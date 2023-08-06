@@ -1,0 +1,59 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\User;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class CreateUserSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        $users = [
+            [
+                'name' => 'User',
+                'email' => 'user@gmail.com',
+                'type' => 0,
+                'password' => bcrypt('123456'),
+            ],
+            [
+                'name' => 'Admin User',
+                'email' => 'admin@gmail.com',
+                'type' => 1,
+                'password' => bcrypt('123456'),
+            ],
+            [
+                'name' => 'Manager User',
+                'email' => 'manager@gmail.com',
+                'type' => 2,
+                'password' => bcrypt('123456'),
+            ],
+            [
+                'name' => 'Doctor User',
+                'email' => 'doctor@gmail.com',
+                'type' => 3,
+                'password' => bcrypt('123456'),
+            ],
+            [
+                'name' => 'Developer User',
+                'email' => 'developer@gmail.com',
+                'type' => 4,
+                'password' => bcrypt('123456'),
+            ],
+            [
+                'name' => 'Marketing User',
+                'email' => 'marketing@gmail.com',
+                'type' => 5,
+                'password' => bcrypt('123456'),
+            ],
+        ];
+
+        foreach ($users as $key => $user) {
+            User::create($user);
+        }
+    }
+}
